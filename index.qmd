@@ -2,7 +2,7 @@
 title: "Homework: Reproducibility and Professional Communication"
 execute:
   error: true
-author: "Your Name"
+author: "Omid Tarashtwal"
 output: html_document
 
 ---
@@ -48,19 +48,30 @@ Then, using what you know about R and Python, try to debug the problem using the
 1. Are the question and problem description complete?
 
 > <!-- Your answer here -->
+not really complete. The person tells us they want to add strings to a vector and shows us their function, but they leave out some pretty important details. Like, what exactly happens when they run it? Does it give an error message, or does it just seem to do nothing? They also don't show us what the meals vector looks like to begin with, or how they're actually using the function. 
 
 2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
 > <!-- Your answer here -->
+Not really reproducible as it is now. They gave the function code, but we can’t actually run it and see the problem ourselves because they didn’t show how they were using it or what the meals vector contained at the start.
+To make it reproducible, they should have included a complete example like:
+```{r}
+meals <- c("breakfast", "lunch")
+add("dinner") 
+print(meals)
+```
+That way, anyone could copy the code, run it, and see the same nothing happens result that the person was frustrated about.
+
 
 3. Is the example minimal? Does it include extra code or information that is not necessary?
 
 > <!-- Your answer here -->
+Yes, the example is minimal. It only includes the small function that shows the problem, with no unnecessary extra code. The only thing that could be removed is as.character, since it doesn’t affect the main issue.
 
 4. Does the question describe any attempted solutions?
 
 > <!-- Your answer here -->
-
+No, the question doesn’t mention anything the person tried to fix the problem. They just said it does not work without explaining what they tested or checked. It would be more helpful if they described what they already tried, like printing inside the function or adding a return() statement.
 
 ## Function not working R
 
@@ -100,19 +111,23 @@ mean(z$nitrate,na.rm=TRUE)
 1. Are the question and problem description complete?
 
 > <!-- Your answer here -->
+Actually, this one is pretty complete. The person explains that they’re new to programming, gives context by mentioning the Coursera R course, and shows both the function that doesn’t work and the version that does when typed step by step. This comparison makes it clear what they expected versus what actually happened, so overall the problem description is well explained and easy to follow.
 
 2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
 > <!-- Your answer here -->
+Yes, the issue is reproducible. The person includes the exact function and the full error message, so anyone can copy their code and see the same warning about “argument is not numeric or logical.” The only small improvement would be to show how the arguments should be passed, specifically that pollutant needs to be in quotes, like "nitrate", and that the directory argument should match the real folder name instead of the placeholder text. Adding those details would make it perfectly reproducible.
+
 
 3. Is the example minimal? Does it include extra code or information that is not necessary?
 
 > <!-- Your answer here -->
+Yes, this example is minimal. They only included the essential function code and the comparison with the working step-by-step version. There's no extra or unrelated code.
 
 4. Does the question describe any attempted solutions?
 
 > <!-- Your answer here -->
-
+Yes, it does. The person shows that they tried running each line separately and that the code worked that way, which means they were already testing and comparing before asking for help. This is a good and clear attempted solution.
 
 ## Inexplicable error when trying to export my R notebook
 
@@ -141,18 +156,24 @@ You can find this sample file [here](https://raw.githubusercontent.com/unl-stati
 1. Are the question and problem description complete?
 
 > <!-- Your answer here -->
+Yes, the question is complete i think. The person shows the exact error message, identifies which line is causing it, and provides the relevant code from the R Markdown file. They also explain what they expected to happen and mention that their plots worked, which helps rule out other issues. 
 
 2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
 > <!-- Your answer here -->
+Not completely. The person includes the code and the error message, but without the actual dataset or even a small preview, we can’t directly reproduce the issue. To make it reproducible, they should have shown the output of colnames(Gastropods) to confirm that the Species column exists. That would let others recreate the exact same scenario and verify the cause of the error.
+
+
 
 3. Is the example minimal? Does it include extra code or information that is not necessary?
 
 > <!-- Your answer here -->
+Yes, the example is minimal. It only includes the code needed to show where the error happens and a short setup for context. The only extra part might be the full YAML header and unrelated comments from the R Markdown file. 
 
 4. Does the question describe any attempted solutions?
 
 > <!-- Your answer here -->
+Not really. The person mentions that their plots are working and that they checked for spelling errors, but they don’t describe any real debugging steps they tried, like testing filter() directly in the console or checking if dplyr was loaded. Adding those details would show that they tried to troubleshoot before posting.
 
 
 ## Python if elif else statement
@@ -198,18 +219,22 @@ if country == "Canada":
 1. Are the question and problem description complete?
 
 > <!-- Your answer here -->
+Yes, it’s complete enough to understand the problem. The person explains what they’re trying to do, provides the full code, and describes what happens when they run it, that the output is always $6 or $8. They also give an example of the expected behavior. 
 
 2. Is the issue reproducible? Does it have a description of the problem, with code that reproduces the problem? What could improve it?
 
 > <!-- Your answer here -->
+Yes, it’s reproducible. They provided complete runnable code and described the problem clearly. An improvement would be to show the exact inputs they used and the resulting outputs to demonstrate the bug better.
 
 3. Is the example minimal? Does it include extra code or information that is not necessary?
 
 > <!-- Your answer here -->
+Yes, the example is minimal. It only includes the code needed to show the problem and doesn’t have any extra lines or unrelated logic. Everything in the script directly relates to the issue.
 
 4. Does the question describe any attempted solutions?
 
 > <!-- Your answer here -->
+No, the person doesn’t mention trying anything to fix it. They only describe what went wrong but don’t show any debugging attempts, like checking data types or printing variable values.
 
 
 # Professional Communication
