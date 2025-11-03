@@ -1,0 +1,65 @@
+---
+title: "About Me"
+author: "Omid Tarashtwal"
+format:
+  revealjs:
+    slide-number: true
+  beamer: default
+execute:
+  echo: false
+---
+
+## About Me
+
+::::: columns
+::: column
+-   Hi, I'm **Omid Tarashtwal**, from **Afghanistan**.\
+-   I'm currently studying in the **Department of Agricultural Economics** at **UNL**.\
+-   I am a **second-year MS student**.\
+-   I'm interested in research on the intersection of **sustainability**, **agricultural economics**, and **development**.\
+:::
+
+::: column
+![](photos.jpg){width="200%"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Background
+
+-   Birthday: **January 1996**\
+-   Grew up in: **Takhar, Afghanistan**\
+-   Currently based in: **United States**\
+-   Fun fact: **I have traveled across four continents**
+
+------------------------------------------------------------------------
+
+## Favorite Animal 🐎
+
+![North of Afghanistan](horse.webp){width="70%"}
+
+------------------------------------------------------------------------
+
+## My Favorite Plot
+
+```{r}
+#| echo: false
+library(ggplot2)
+ggplot(mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +
+  geom_point(size = 3) +
+  labs(
+    title = "Fuel Efficiency vs. Horsepower",
+    x = "Horsepower",
+    y = "Miles per Gallon",
+    color = "Cylinders"
+  ) +
+  theme_minimal()
+```
+
+## My CV
+
+You can view or download my CV here:
+
+[Download CV (PDF)](cv.pdf)
+
